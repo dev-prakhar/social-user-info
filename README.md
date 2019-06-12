@@ -1,2 +1,2 @@
 # social-authentication
-A pip package that helps authorization with social apps
+A python package that helps authorization with social apps

@@ -4,7 +4,7 @@ import setuptools
 
 
 def readme():
-    with io.open('README.rst', 'r', encoding='utf8') as f:
+    with io.open('README.md', 'r', encoding='utf8') as f:
         return f.read()
 
 

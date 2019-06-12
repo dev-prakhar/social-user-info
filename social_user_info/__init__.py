@@ -1,1 +1,1 @@
-name = 'social_authentication'
+name = 'social_user_info'

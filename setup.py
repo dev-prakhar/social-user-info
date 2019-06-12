@@ -16,7 +16,7 @@ setuptools.setup(
     version='0.1',
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",
-    description="A python package that helps authorization with social apps",
+    description="A python package that helps getting the user info from social apps",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dev-prakhar/social-authentication.git",

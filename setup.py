@@ -1,11 +1,4 @@
-import io
-
 import setuptools
-
-
-def readme():
-    with io.open('README.md', 'r', encoding='utf8') as f:
-        return f.read()
 
 
 def requirements():
@@ -21,8 +14,6 @@ setuptools.setup(
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="A python package that helps getting the user info from social apps",
-    long_description=readme(),
-    long_description_content_type="text/markdown",
     url="https://github.com/dev-prakhar/social-user-info",
     packages=setuptools.find_packages(),
     install_requires=requirements(),

@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='social-authentication',
+    name='social-user-info',
     version='0.1',
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",

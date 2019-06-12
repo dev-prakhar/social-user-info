@@ -3,8 +3,12 @@ A python package that helps getting the user info from social apps
 
 ## Installation
 ```
+Required Python Version >= 3
+```
+```
 pip install social-user-info
 ```
+
 
 ## Supported Social Media
 

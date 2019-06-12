@@ -1,10 +1,3 @@
-SUCCESS_RESPONSE = {'success': True}
-TIMESTAMP_FIELDS = ['created_at', 'modified_at', ]
-
-REQUEST_METHOD_GET = 'GET'
-REQUEST_METHOD_POST = 'POST'
-REQUEST_METHOD_PUT = 'PUT'
-
 # ------------------------------------------ API URLs ------------------------------------------------------------------
 
 GOOGLE_PROFILE_API_URL = 'https://www.googleapis.com/userinfo/v2/me'
@@ -23,10 +16,5 @@ AUTH_SOURCE_GOOGLE = 'google'
 AUTH_SOURCE_FACEBOOK = 'facebook'
 
 INVALID_AUTH_SOURCE_ERROR = "{} source is not supported in this service"
-
-# -------------------------------------------- Default Constants -------------------------------------------------------
-
-DEFAULT_HTML_PARSER = 'html5lib'
-DEFAULT_ADMIN_LINK = '<a href="{0}" target="_blank">{1}</a>'
 
 # ----------------------------------------------------------------------------------------------------------------------

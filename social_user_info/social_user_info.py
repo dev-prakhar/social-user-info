@@ -1,6 +1,6 @@
 import requests
-import constants
-import status_codes
+from social_user_info import constants
+from social_user_info import status_codes
 
 
 class APIService:

@@ -15,13 +15,13 @@ def requirements():
 
 setuptools.setup(
     name='social-user-info',
-    version='0.1',
+    version='0.2',
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="A python package that helps getting the user info from social apps",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dev-prakhar/social-authentication.git",
+    url="https://github.com/dev-prakhar/social-user-info",
     packages=setuptools.find_packages(),
     install_requires=requirements(),
     classifiers=[

@@ -3,6 +3,14 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
+def requirements():
+    req = []
+    for line in open('requirements.txt', 'r'):
+        req.append(line.split()[0])
+    return req
+
+
 setuptools.setup(
     name='social-user-info',
     version='0.1',
@@ -13,6 +21,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/dev-prakhar/social-authentication.git",
     packages=setuptools.find_packages(),
+    install_requires=requirements(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

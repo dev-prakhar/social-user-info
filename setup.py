@@ -21,7 +21,7 @@ setuptools.setup(
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="A python package that helps getting the user info from social apps",
-    long_description=long_description,
+    long_description=readme(),
     long_description_content_type="text/markdown",
     url="https://github.com/dev-prakhar/social-user-info",
     packages=setuptools.find_packages(),

@@ -17,7 +17,7 @@ def requirements():
 
 setuptools.setup(
     name='social-user-info',
-    version='0.8',
+    version='1.0',
     author="Prakkhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="A python package that helps getting the user info from social apps",

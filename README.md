@@ -19,7 +19,7 @@ pip install social-user-info
 ## How it works?
 
 The package has a method `APIService.get_user_info(access_token, auth_source)`.
-This method accepts the access_token and auth_source(`google`, `facebook`) and returns the user info corresponding to the given access token
+This method accepts the access_token and auth_source and returns the user info corresponding to the given access token
 
 ## Testing
 

@@ -3,6 +3,7 @@
 GOOGLE_PROFILE_API_URL = 'https://www.googleapis.com/userinfo/v2/me'
 FACEBOOK_PROFILE_API_URL = 'https://graph.facebook.com/v3.2/me'
 FACEBOOK_PROFILE_PIC_API_URL = 'https://graph.facebook.com/v3.2/me/picture'
+GITHUB_PROFILE_API_URL = 'https://api.github.com/user'
 
 # ------------------------------------------ Service Constants ---------------------------------------------------------
 
@@ -14,6 +15,7 @@ FACEBOOK_PROFILE_FIELDS = 'email,first_name,last_name'
 
 AUTH_SOURCE_GOOGLE = 'google'
 AUTH_SOURCE_FACEBOOK = 'facebook'
+AUTH_SOURCE_GITHUB = 'github'
 
 INVALID_AUTH_SOURCE_ERROR = "{} source is not supported in this service"
 

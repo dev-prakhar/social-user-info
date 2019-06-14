@@ -103,10 +103,48 @@ class FacebookAPI(AbstractSocialMediaAPI):
         return user_info
 
 
+class GitHubAPI(AbstractSocialMediaAPI):
+    """
+    This class is used for getting user information from facebook using facebook api and the user's access token
+    """
+    PROFILE_URL = constants.GITHUB_PROFILE_API_URL
+
+    @staticmethod
+    def get_authorization_header(access_token):
+        return {constants.AUTHORIZATION_KEY: constants.AUTHORIZATION_VALUE.format(access_token=access_token)}
+
+    @staticmethod
+    def get_transformed_keys(response):
+        return {
+            **response,
+            'first_name': response.get('name', '').split(' ')[0],
+            'last_name': response.pop('name', '').split(' ')[-1],
+            'profile_picture': response.pop('avatar_url', None)
+        }
+
+    @classmethod
+    def get_user_info(cls, access_token):
+        profile_api = requests.get(url=cls.PROFILE_URL, headers=cls.get_authorization_header(access_token))
+
+        if profile_api.status_code == status_codes.HTTP_OK_REQUEST:
+            user_info = {
+                **cls.get_transformed_keys(profile_api.json()),
+                **cls.get_response_status(profile_api.status_code)
+            }
+        else:
+            user_info = {
+                **profile_api.json(),
+                **cls.get_response_status(profile_api.status_code)
+            }
+
+        return user_info
+
+
 class APIService:
     SOURCE_TO_SOCIAL_API = {
         constants.AUTH_SOURCE_GOOGLE: GoogleAPI,
-        constants.AUTH_SOURCE_FACEBOOK: FacebookAPI
+        constants.AUTH_SOURCE_FACEBOOK: FacebookAPI,
+        constants.AUTH_SOURCE_GITHUB: GitHubAPI,
     }
 
     @classmethod
@@ -119,7 +157,8 @@ class APIService:
         :return: user_info
         """
         user_info = {
-            'status': status_codes.HTTP_BAD_REQUEST, 'error': constants.INVALID_AUTH_SOURCE_ERROR.format(auth_source)
+            'status': status_codes.HTTP_BAD_REQUEST,
+            'error': constants.INVALID_AUTH_SOURCE_ERROR.format(auth_source)
         }
 
         api_class = cls.get_api(auth_source)

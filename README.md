@@ -14,6 +14,7 @@ pip install social-user-info
 
 * Google
 * Facebook
+* Github
 
 ## How it works?
 
@@ -32,10 +33,21 @@ This method accepts the access_token and auth_source(`google`, `facebook`) and r
 #### Get you facebook access token
 * Read through this: https://developers.facebook.com/docs/facebook-login/access-tokens/
 
+#### Get you github access token
+* Login to your github account
+* Navigate to settings
+* Navigate to developer settings at the bottom left
+* Navigate to personal access token
+* Generate a new Token
+* Give access to `read:user` and `user:email`
+* Get the `access_token` by clicking on Generate Token
+
+
 #### Obtain user info
 ```python
 from social_user_info.social_user_info import APIService
 
 APIService.get_user_info(access_token={access_token_from_above_step}, auth_source='google')
 APIService.get_user_info(access_token={access_token_obtained_from_facebook}, auth_source='facebook')
+APIService.get_user_info(access_token={access_token_obtained_from_github}, auth_source='github')
 ```

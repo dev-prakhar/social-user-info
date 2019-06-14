@@ -39,7 +39,6 @@ This method accepts the access_token and auth_source and returns the user info c
 * Navigate to developer settings at the bottom left
 * Navigate to personal access token
 * Generate a new Token
-* Give access to `read:user` and `user:email`
 * Get the `access_token` by clicking on Generate Token
 
 

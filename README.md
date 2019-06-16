@@ -21,7 +21,7 @@ pip install social-user-info
 The package has a method `APIService.get_user_info(access_token, auth_source)`.
 This method accepts the access_token and auth_source and returns the user info corresponding to the given access token
 
-## Testing
+## Usage
 
 #### Get your google access token:
 * Navigate to: https://developers.google.com/oauthplayground/

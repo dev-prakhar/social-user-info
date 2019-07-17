@@ -1,4 +1,4 @@
-[![Downloads](https://pepy.tech/badge/social-user-info/month)](https://pepy.tech/project/social-user-info/month)
+[![Downloads](https://pepy.tech/badge/social-user-info)](https://pepy.tech/project/social-user-info)
 
 # Social User Info
 A python package that helps getting the user info from social apps

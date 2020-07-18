@@ -11,6 +11,8 @@ AUTHORIZATION_KEY = 'Authorization'
 AUTHORIZATION_VALUE = 'Bearer {access_token}'
 FACEBOOK_PROFILE_FIELDS = 'email,first_name,last_name'
 
+DEFAULT_TIMEOUT = 5 # 5 Seconds
+
 # ------------------------------------------ Auth Source Constants -----------------------------------------------------
 
 AUTH_SOURCE_GOOGLE = 'google'

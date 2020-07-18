@@ -38,7 +38,7 @@ class GoogleAPI(AbstractSocialMediaAPI):
 
     @classmethod
     def get_user_info(cls, access_token):
-        profile_api = requests.get(url=cls.PROFILE_URL, headers=cls.get_authorization_header(access_token))
+        profile_api = requests.get(url=cls.PROFILE_URL, headers=cls.get_authorization_header(access_token), timeout=constants.DEFAULT_TIMEOUT)
 
         if profile_api.status_code == status_codes.HTTP_OK_REQUEST:
             user_info = {
@@ -79,7 +79,7 @@ class FacebookAPI(AbstractSocialMediaAPI):
 
     @classmethod
     def get_profile_picture_url(cls, access_token):
-        profile_pic_api = requests.get(url=cls.PROFILE_PIC_URL, params=cls.get_profile_pic_api_params(access_token))
+        profile_pic_api = requests.get(url=cls.PROFILE_PIC_URL, params=cls.get_profile_pic_api_params(access_token), timeout=constants.DEFAULT_TIMEOUT)
         return {
             **{'profile_picture': profile_pic_api.json().get('data', {}).get('url')},
             **cls.get_response_status(profile_pic_api.status_code)
@@ -87,7 +87,7 @@ class FacebookAPI(AbstractSocialMediaAPI):
 
     @classmethod
     def get_user_info(cls, access_token):
-        profile_api = requests.get(url=cls.PROFILE_URL, params=cls.get_profile_api_params(access_token))
+        profile_api = requests.get(url=cls.PROFILE_URL, params=cls.get_profile_api_params(access_token), timeout=constants.DEFAULT_TIMEOUT)
 
         if profile_api.status_code == status_codes.HTTP_OK_REQUEST:
             user_info = {
@@ -124,7 +124,7 @@ class GitHubAPI(AbstractSocialMediaAPI):
 
     @classmethod
     def get_user_info(cls, access_token):
-        profile_api = requests.get(url=cls.PROFILE_URL, headers=cls.get_authorization_header(access_token))
+        profile_api = requests.get(url=cls.PROFILE_URL, headers=cls.get_authorization_header(access_token), timeout=constants.DEFAULT_TIMEOUT)
 
         if profile_api.status_code == status_codes.HTTP_OK_REQUEST:
             user_info = {

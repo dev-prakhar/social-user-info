@@ -4,6 +4,7 @@ GOOGLE_PROFILE_API_URL = 'https://www.googleapis.com/userinfo/v2/me'
 FACEBOOK_PROFILE_API_URL = 'https://graph.facebook.com/v3.2/me'
 FACEBOOK_PROFILE_PIC_API_URL = 'https://graph.facebook.com/v3.2/me/picture'
 GITHUB_PROFILE_API_URL = 'https://api.github.com/user'
+GITHUB_EMAIL_API_URL = 'https://api.github.com/user/emails'
 
 # ------------------------------------------ Service Constants ---------------------------------------------------------
 

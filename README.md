@@ -1,7 +1,7 @@
 [![Downloads](https://pepy.tech/badge/social-user-info)](https://pepy.tech/project/social-user-info)
 
 # Social User Info
-A python package that helps getting the user info from social apps
+A python package that helps to get the user info from social apps
 
 ## Installation
 ```
@@ -11,12 +11,12 @@ Required Python Version >= 3
 pip install social-user-info
 ```
 
-
 ## Supported Social Media
 
 * Google
 * Facebook
 * Github
+* Microsoft
 
 ## How it works?
 
@@ -32,16 +32,22 @@ This method accepts the access_token and auth_source and returns the user info c
 * In Step 2, Click on **Exchange Authorization Code for Tokens**
 * Get the `access_token` from the returned JSON
 
-#### Get you facebook access token
+#### Get your facebook access token
 * Read through this: https://developers.facebook.com/docs/facebook-login/access-tokens/
 
-#### Get you github access token
+#### Get your github access token
 * Login to your github account
 * Navigate to settings
 * Navigate to developer settings at the bottom left
 * Navigate to personal access token
 * Generate a new Token
 * Get the `access_token` by clicking on Generate Token
+
+
+### Get your microsoft access token
+* Navigate to https://developer.microsoft.com/en-us/graph/graph-explorer
+* Authorize with your microsoft account and give permission to read users
+* Select the `Access Token` Tab and copy the access token
 
 
 #### Obtain user info
@@ -51,4 +57,5 @@ from social_user_info.social_user_info import APIService
 APIService.get_user_info(access_token={access_token_from_above_step}, auth_source='google')
 APIService.get_user_info(access_token={access_token_obtained_from_facebook}, auth_source='facebook')
 APIService.get_user_info(access_token={access_token_obtained_from_github}, auth_source='github')
+APIService.get_user_info(access_token={access_token_obtained_from_microsoft}, auth_source='microsoft')
 ```

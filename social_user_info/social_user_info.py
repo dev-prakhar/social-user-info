@@ -1,6 +1,6 @@
 from social_user_info import constants
 from social_user_info import status_codes
-from social_user_info.social_medias import GoogleAPI, FacebookAPI, GitHubAPI
+from social_user_info.social_medias import GoogleAPI, FacebookAPI, GitHubAPI, MicrosoftAPI
 
 
 class APIService:
@@ -8,6 +8,7 @@ class APIService:
         constants.AUTH_SOURCE_GOOGLE: GoogleAPI,
         constants.AUTH_SOURCE_FACEBOOK: FacebookAPI,
         constants.AUTH_SOURCE_GITHUB: GitHubAPI,
+        constants.AUTH_SOURCE_MICROSOFT: MicrosoftAPI
     }
 
     @classmethod
